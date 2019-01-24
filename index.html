@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     itemNodes.forEach(itemNode => {
     itemNode.onclick = () => {
         const imgSrc = itemNode.src;
-        console.log(imgSrc);
         highlightItemNodesByImgSrc(imgSrc);
     }
     });
