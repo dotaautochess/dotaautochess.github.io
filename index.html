@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     itemNodes.forEach(itemNode => {
     itemNode.onclick = () => {
         const imgSrc = itemNode.src;
+        console.log(imgSrc);
         highlightItemNodesByImgSrc(imgSrc);
     }
     });
@@ -222,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <td class="item"><img src="60px-Assault_Cuirass_icon.png" /><div class="num">6</div></td>
         <td class="tier1"><img src="60px-Chainmail_icon.png" /><div class="dupe">&nbsp;</div></td>
         <td class="tier2"><img src="60px-Platemail_icon.png" /><div class="dupe">&nbsp;</div></td>
-        <td class="tier3"><img src="60px-Hyperstone_icon.png" /></td>
+        <td class="tier3"><img src="60px-Hyperstone_icon.png" /><div class="dupe">&nbsp;</div></td>
         <td class="desc">
             Aura: Armor +10 and attack speed +15 for allies within 1 grid<br />
             Aura, Armor -10 and attack speed -15 for enemies within 1 grid
