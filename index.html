@@ -6,7 +6,8 @@ html {
     background: #111111;
     color: white;
     width: 100%;
-    font-family: monospace;
+    font-family: monospace, serif;
+    font-size: 12px;
 }
 table {
     width: 800px;
@@ -18,33 +19,36 @@ td {
     padding: 0;
     vertical-align: top;
     position: relative;
+    font-family: monospace, serif;
+    font-size: 12px;
 }
 a {
     color: white;
 }
-.item {
+.item > img {
     border: 3px solid #444444;
 }
 .desc {
     background: #222222;
     color: white;
+    padding: 3px;
 }
-.tier1 {
+.tier1 > img {
     border: 3px solid lime;
 }
-.tier2 {
+.tier2 > img {
     border: 3px solid yellow;
 }
-.tier3 {
+.tier3 > img {
     border: 3px solid orange;
 }
-.tier4 {
+.tier4 > img {
     border: 3px solid red;
 }
 .dupe {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 3;
+    right: 3;
     font-weight: bold;
     color: white;
     background: rgba(255, 0, 0, 0.75);
@@ -55,8 +59,8 @@ a {
 }
 .num {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 3;
+    right: 3;
     font-weight: bold;
     color: white;
     padding: 2;
