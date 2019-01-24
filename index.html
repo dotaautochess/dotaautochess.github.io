@@ -75,6 +75,34 @@ a {
                 enable_page_level_ads: true
             });
     </script>
+    <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+    const itemNodes = document.querySelectorAll('img');
+
+    function resetItemNodes() {
+    itemNodes.forEach(itemNode => {
+        itemNode.style.boxShadow = '';
+    });
+    }
+
+    function highlightItemNodesByImgSrc(imgSrc) {
+    resetItemNodes();
+    itemNodes.forEach(itemNode => {
+        if (itemNode.src === imgSrc) {
+        itemNode.style.boxShadow = '0 0 10px 5px #aaa';
+        }
+    });
+    }
+
+    itemNodes.forEach(itemNode => {
+    itemNode.onclick = () => {
+        const imgSrc = itemNode.src;
+        console.log(imgSrc);
+        highlightItemNodesByImgSrc(imgSrc);
+    }
+    });
+});
+    </script>
 </head>
 <body>
 <table id="main">
@@ -153,7 +181,7 @@ a {
         <td class="item"><img src="60px-Vanguard_icon.png" /><div class="num">4</div></td>
         <td class="tier1"><img src="60px-Stout_Shield_icon.png" /></td>
         <td class="tier1"><img src="60px-Ring_of_Health_icon.png" /><div class="dupe">&nbsp;</div></td>
-        <td class="tier2"><img src="60px-Vitality_Booster_icon.png" /></td>
+        <td class="tier2"><img src="60px-Vitality_Booster_icon.png" /><div class="dupe">&nbsp;</div></td>
         <td class="desc">
             Max HP +250<br />
             HP regeneration +10<br />
